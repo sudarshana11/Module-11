@@ -1,3 +1,4 @@
+
 # 📚 Singly Linked List : Find the Middle Node of a Singly Linked List Using Recursion
 
 This Python program demonstrates how to find the middle node of a singly linked list using recursion. The program calculates the middle element by utilizing two pointers, with one pointer moving one step at a time (slow) and the other moving two steps at a time (fast). When the fast pointer reaches the end of the list, the slow pointer will be at the middle node.
@@ -36,10 +37,38 @@ To write a Python program that:
 ---
 
 ## 💻 Program
-Add code here
-
+```
+class Node:
+def __init__(self, value):
+self.data = value
+self.next = None
+class LinkedList:
+def __init__(self):
+self.head = None
+def push(self, new_data):
+new_node = Node(new_data)
+new_node.next = self.head
+self.head = new_node
+def printMiddle(self):
+slow=self.head
+fast=self.head
+if not self.head:
+print("empty")
+return
+while fast and fast.next.next:
+slow=slow.next.next
+fast=fast.next.next.next
+print(slow.data)
+llist = LinkedList()
+for i in range(5):
+value = input()
+llist.push(value)
+llist.printMiddle()
+```
 ## Sample Input & Output
 
+<img width="440" height="288" alt="image" src="https://github.com/user-attachments/assets/d36e41cd-4c73-4349-aca3-05a7bf6ef01c" />
+
 ## Result
-
-
+Thus, the python program to find the middle node of a singly linked list using
+recursion has been executed successfully.
